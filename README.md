@@ -266,21 +266,28 @@ When setting augmentations equal to 3, the maximum accuracy decreases and cannot
 
 Accuracy on train and validation datasets:
 
-|   From scratch                        |   Pretrained                        |  Quick pretrained                        |
-|:------------------------------------- |:------------------------------------|:-----------------------------------------|
-|  ![](pics/from_scratch_acc_small.png) |  ![](pics/pretrained_acc_small.png) | ![](pics/quick_pretrained_acc_small.png) |
+|                   |                                           |
+|:----------------- |:------------------------------------------|
+|  From scratch     |  ![](pics/from_scratch_acc_small.png)     |
+|  Pretrained       |  ![](pics/pretrained_acc_small.png)       |
+|  Quick pretrained |  ![](pics/quick_pretrained_acc_small.png) |
 
 Bar charts with top 20 correctly predicted classes: 
 
-|   From scratch                        |   Pretrained                        |  Quick pretrained                        |
-|:------------------------------------- |:------------------------------------|:-----------------------------------------|
-|  ![](pics/from_scratch_hist_best.png) |  ![](pics/pretrained_hist_best.png) | ![](pics/quick_pretrained_hist_best.png) |
+|                   |                                           |
+|:----------------- |:------------------------------------------|
+|  From scratch     |  ![](pics/from_scratch_hist_best.png)     |
+|  Pretrained       |  ![](pics/pretrained_hist_best.png)       |
+|  Quick pretrained |  ![](pics/quick_pretrained_hist_best.png) |
+
 
 Bar charts with top 20 incorrectly predicted classes: 
 
-|   From scratch                         |   Pretrained                         |  Quick pretrained                         |
-|:-------------------------------------- |:-------------------------------------|:------------------------------------------|
-|  ![](pics/from_scratch_hist_worst.png) |  ![](pics/pretrained_hist_worst.png) | ![](pics/quick_pretrained_hist_worst.png) |
+|                   |                                            |
+|:----------------- |:-------------------------------------------|
+|  From scratch     |  ![](pics/from_scratch_hist_worst.png)     |
+|  Pretrained       |  ![](pics/pretrained_hist_worst.png)       |
+|  Quick pretrained |  ![](pics/quick_pretrained_hist_worst.png) |
 
 As you can see, there are several classes that all three classifiers predict almost equally well. 
 However, for a network trained from scratch, the top 20 incorrect predicted classes have low accuracy (no more than 28%). 
