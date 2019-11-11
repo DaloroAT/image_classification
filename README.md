@@ -7,16 +7,16 @@ We implement the classifier for [Tiny ImageNet dataset](https://tiny-imagenet.he
 On this dataset, the classifier can be trained on a personal computer in a reasonable amount of time.
 [PyTorch](https://pytorch.org/) framework is used for machine learning.
 
+Before moving on, we note that to classify Tiny ImageNet you can use pretrained models without any architectural changes. To do this, you need to upsample Tiny ImageNet to the size of the images of the original dataset. The results may differ from the results with the original dataset, because when downsampling, details are lost.
+
 ## Overview
 The Tiny ImageNet dataset spans 200 image classes with 500 training examples per class. 
-The dataset also has 50 validation and 50 validation examples per class. Image resolution is 64x64 pixels.
+The dataset also has 50 validation and 50 test examples per class. Image resolution is 64x64 pixels.
 The dataset is derived from the original dataset using downsampling. 
 
-A folder with a test dataset is also presented, but it is not labeled. 
+A folder with a test dataset is not labeled. 
 We use the words test and validation as interchangeable, since we do not work with them separately, 
-but this is incorrect. For the objectivity of the model, it is correct to conduct fine tuning on 
-the validation dataset, and get the final result on the test dataset, which has not been used before.
-If you do not fully understand the differences between these terms, read this [article](https://machinelearningmastery.com/difference-test-validation-datasets/).
+but this is incorrect. For the [objectivity of the model](https://machinelearningmastery.com/difference-test-validation-datasets/), it is correct to conduct fine tuning on the validation dataset, and get the final result on the test dataset, which has not been used before.
 
 The training set is small and contains low-resolution images, so overfitting can occur quite quickly during training.
 However, there are practices that avoid fast overfitting and further improve accuracy. 
